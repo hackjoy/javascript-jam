@@ -1,4 +1,6 @@
-# Testing the usage of various JavaScript libraries
+## JavaScript Library Testing
+
+Testing out the usage of various libraries.
 
 ### Packages to test in the future:
 
