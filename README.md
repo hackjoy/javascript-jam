@@ -1,12 +1,12 @@
-## JavaScript Library Testing
+### JavaScript Jam
 
-Testing out the usage of various libraries.
+A project to test out various JavaScript libraries and develop JavaScript and CoffeeScript language cheatsheets.
 
-### Packages tested:
+##### Packages tested:
 
 Underscore.js
 
-### Packages to test in the future:
+##### Packages to be testing:
 
 time = require('time'),
 async = require('async'),
@@ -14,3 +14,4 @@ moment = require('moment'),
 url = require('url'),
 requireDir = require('require-dir'),
 strftime = require('prettydate').strftime;
+.....
