@@ -2,6 +2,10 @@
 
 Testing out the usage of various libraries.
 
+### Packages tested:
+
+Underscore.js
+
 ### Packages to test in the future:
 
 time = require('time'),
