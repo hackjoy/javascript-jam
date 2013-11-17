@@ -45,8 +45,20 @@ var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 var plays = _.where(listOfPlays, {author: "Shakespeare", year: 1611});
 => [{title: "Cymbeline", author: "Shakespeare", year: 1611}, {title: "The Tempest", author: "Shakespeare", year: 1611}]
 
+// #FINDWHERE ::: Returns first item that matches all properties
+// findWhere_.findWhere(list, properties)
+_.findWhere(publicServicePulitzers, {newsroom: "The New York Times"});
+=> {year: 1918, newsroom: "The New York Times",  reason: "Bla bla bla."}
+
+// #REJECT ::: returns an array excluding items that pass the truth test
+// _.reject(list, iterator, [context])
+var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+=> [1, 3, 5]
+
+
 
 // CONTAINS
+
 var containsTest = _.contains([1, 2, 3], 3);
 // => true
 
