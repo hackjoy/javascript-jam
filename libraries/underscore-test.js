@@ -43,22 +43,31 @@ var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 // #WHERE ::: Looks through each value in the list, returning an array of all the values that contain all of the key-value pairs listed in properties.
 // _.where(list, properties)
 var plays = _.where(listOfPlays, {author: "Shakespeare", year: 1611});
-=> [{title: "Cymbeline", author: "Shakespeare", year: 1611}, {title: "The Tempest", author: "Shakespeare", year: 1611}]
+// => [{title: "Cymbeline", author: "Shakespeare", year: 1611}, {title: "The Tempest", author: "Shakespeare", year: 1611}]
 
 // #FINDWHERE ::: Returns first item that matches all properties
 // findWhere_.findWhere(list, properties)
 _.findWhere(publicServicePulitzers, {newsroom: "The New York Times"});
-=> {year: 1918, newsroom: "The New York Times",  reason: "Bla bla bla."}
+// => {year: 1918, newsroom: "The New York Times",  reason: "Bla bla bla."}
 
 // #REJECT ::: returns an array excluding items that pass the truth test
 // _.reject(list, iterator, [context])
 var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
-=> [1, 3, 5]
+// => [1, 3, 5]
+
+// #EVERY ::: Returns true if all items pass the iterator truth test
+// every_.every(list, [iterator], [context]) Alias: all
+_.every([true, 1, null, 'yes'], _.identity);
+// => false
+
+// #SOME #ANY ::: Returns true if any items pass the iterator truth test
+// _.some(list, [iterator], [context])
+_.some([null, 0, 'yes', false]);
+// => true
 
 
-
-// CONTAINS
-
+// #CONTAINS #INCLUDE
+// .contains(list, value)
 var containsTest = _.contains([1, 2, 3], 3);
 // => true
 
