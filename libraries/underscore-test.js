@@ -4,9 +4,8 @@ _ = require('underscore');
 // COLLECTIONS
 // ***********************************************
 
-// #EACH #FOREACH
+// #EACH #FOREACH  ::: Iterates thorugh a list
 // _.each(list, iterator, [context])
-// Iterates thorugh a list
 var person = {};
 person.friends = {
     name1: true,
@@ -20,24 +19,31 @@ _.each(['name1', 'name3'], function(name){
 // => alerts name1 and name3 only
 
 
-// #MAP #COLLECT
+// #MAP #COLLECT :::  Returns a new array
 // _.map(list, iterator, [context])
-// Returns a new array
 var mapTest = _.map([1, 2, 3], function(num) { return num += 1; } );
 console.log(mapTest);
 // => [2, 3, 4]
 
-// #REDUCE #INJECT #FOLDL
+// #REDUCE #INJECT #FOLDL :::  Boils down a list of values into a single value.
 // _.reduce(list, iterator, memo, [context])        // memo is returned each time.
-// Boils down a list of values into a single value.
 var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
 // => 6
 
-// #FIND #DETECT
+// #FIND #DETECT ::: Halts and returns on first match found
 // _.find(list, iterator, [context])
-// Halts and returns on first match found
 var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 // => 2
+
+// #FILTER #SELECT ::: Returns array of values that pass truth test of iterator
+// _.filter(list, iterator, [context])
+var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+// => [2, 4, 6]
+
+// #WHERE ::: Looks through each value in the list, returning an array of all the values that contain all of the key-value pairs listed in properties.
+// _.where(list, properties)
+var plays = _.where(listOfPlays, {author: "Shakespeare", year: 1611});
+=> [{title: "Cymbeline", author: "Shakespeare", year: 1611}, {title: "The Tempest", author: "Shakespeare", year: 1611}]
 
 
 // CONTAINS
