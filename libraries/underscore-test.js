@@ -65,9 +65,17 @@ _.every([true, 1, null, 'yes'], _.identity);
 _.some([null, 0, 'yes', false]);
 // => true
 
-
 // #CONTAINS #INCLUDE
 // .contains(list, value)
 var containsTest = _.contains([1, 2, 3], 3);
 // => true
+
+// #INVOKE ::: calls method passed by name on each value in list
+// _.invoke(list, methodName, [*arguments])
+_.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
+// => [[1, 5, 7], [1, 2, 3]]
+
+
+_.max(list, [iterator], [context])
+_.min(list, [iterator], [context])
 
