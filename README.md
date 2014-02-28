@@ -6,12 +6,6 @@ A project to test out various JavaScript libraries and develop JavaScript and Co
 
 Underscore.js
 
-##### Packages to be testing:
+##### Packages to be tested:
 
-time = require('time'),
-async = require('async'),
-moment = require('moment'),
-url = require('url'),
-requireDir = require('require-dir'),
-strftime = require('prettydate').strftime;
-.....
+* Bluebird
